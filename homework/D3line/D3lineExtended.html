@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<h1> D3 Line </h1>
+		<p> Monthly Opening, Highest and Lowest values of Microsoft and Oracle stock from Jan 2014 till 2015 </p>
+		<style>
+			body {
+				font: 10px sans-serif;
+			}
+			.d3-tip {
+				line-height: 1;
+				font-weight: bold;
+				padding: 12px;
+				background: rgba(0, 0, 0, 0.8);
+				color: #fff;
+				border-radius: 2px;
+			}
+			.axis path,
+			.axis line {
+				fill: none;
+			    stroke: #000;
+				shape-rendering: crispEdges;
+			}
+
+			.text {
+				fill: white;
+				font: 20px sans-serif
+				text-anchor: start
+				font-weight: bold;
+			}
+
+			.line {
+			    fill: none;
+			    stroke: steelblue;
+			    stroke-width: 2.0px;
+			}	 
+
+			.datapoint:hover{
+				fill: steelblue
+			} 	  
+		</style>
+	</head>
+	<body>
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+		<script src="http://d3js.org/queue.v1.min.js"></script>
+		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+		<script src="d3lineExtended.js" ></script>
+	</body>
+</html>
