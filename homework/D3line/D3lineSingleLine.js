@@ -54,7 +54,6 @@ d3.json("Microsoft.json", function(error, microsoft) {
     for (var i= 0; i < 24; i++) {
         values.push(microsoft[i].open)
     };
-    console.log(microsoft)
 
     x.domain(d3.extent(microsoft, function(d) { return d.date;}));
     y.domain([d3.min(microsoft, function(d) { return d.open;}),

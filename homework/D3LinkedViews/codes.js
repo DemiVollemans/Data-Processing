@@ -181,7 +181,7 @@ var country_codes = [
     ["qa", "QAT", "Qatar"],
     ["re", "REU", "Réunion"],
     ["ro", "ROU", "Romania"],
-    ["ru", "RUS", "Russian Federation"],
+    ["ru", "RUS", "Russia"],
     ["rw", "RWA", "Rwanda"],
     ["bl", "BLM", "Saint Barthélemy"],
     ["sh", "SHN", "Saint Helena, Ascension and Tristan da Cunha"],
@@ -248,40 +248,3 @@ var country_codes = [
     ["ye", "YEM", "Yemen"],
     ["zm", "ZMB", "Zambia"],
     ["zw", "ZWE", "Zimbabwe"] ];
-
-
-//var map = new Datamap({ element: document.getElementById('container')})
-d3.json("data2.json", function(error, data) {
-  if (error) return console.warn(error);
- var dataset = {};
-
-data.forEach (function(d) {
-	d.country = d.country;
-	d.GDP = +d.GDP;
-	//console.log(country1);
-for (var j = 0; j < 249; j++) {
-        if (d.country == country_codes[j][2]) {
-            d.code = country_codes[j][1];
-            //console.log(code);
-            //format (code, GDP);
-            //var series = [code, GDP]
-            //console.log(series);
-        }
-    }
-    // dataset[d.code] = { fil key}
-});
-console.log(data)
-
-
-
-
-// formateer naar het juiste datamap format
-// var dataset = {};
-// function format (code, GDP) {
-// 	//console.log(code, GDP);
-// 	for (var k = 0; k < 186; k++){
-// 		var gok = 1
-// 	}	
-// }
-
-});

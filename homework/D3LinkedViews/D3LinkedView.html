@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<h1> D3 Linked View</h1>
+		<p> Relative Happiness, Alcohol Consumption and GDP Per Head</p>
+		<style>
+			body, html {
+				font: 10px sans-serif;
+				width: 960px;
+				height: 100%;
+			}
+
+			svg {
+				width: 100%;
+				height: 100%;
+				float: left;
+			}	
+		  	.axis path,
+			.axis line {
+				fill: none;
+			    stroke: #000;
+				shape-rendering: crispEdges;
+			}
+
+			.text {
+				fill: white;
+				font: 20px sans-serif
+				text-anchor: start
+				font-weight: bold;
+			}
+
+			.line {
+			    fill: none;
+			    stroke: steelblue;
+			    stroke-width: 2.0px;
+			}	 
+
+			.datapoint:hover{
+				fill: steelblue
+			} 	    
+			circle {
+    			opacity: 0.9;
+    			stroke:none;
+      		}
+
+		</style>
+	</head>
+	<body>
+		<script src="codes2.js" ></script>
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+		<script src="https://d3js.org/topojson.v1.min.js"></script> 
+		<script src="http://datamaps.github.io/scripts/datamaps.world.js"></script>
+		<script src="http://d3js.org/queue.v1.min.js"></script>
+		<div id = "container" style = "position: relative; width: 700px; height: 800px;"></div>
+		<script src="chart.js" ></script>
+	</body>
+	<p> Demi Vollemans</p>
+</html>

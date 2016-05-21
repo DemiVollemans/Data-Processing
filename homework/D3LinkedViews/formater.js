@@ -251,37 +251,34 @@ var country_codes = [
 
 
 //var map = new Datamap({ element: document.getElementById('container')})
-d3.json("data2.json", function(error, data) {
+var data = d3.json("lifedata.json", function(error, data) {
   if (error) return console.warn(error);
- var dataset = {};
 
-data.forEach (function(d) {
-	d.country = d.country;
-	d.GDP = +d.GDP;
-	//console.log(country1);
-for (var j = 0; j < 249; j++) {
-        if (d.country == country_codes[j][2]) {
-            d.code = country_codes[j][1];
-            //console.log(code);
-            //format (code, GDP);
-            //var series = [code, GDP]
-            //console.log(series);
-        }
-    }
-    // dataset[d.code] = { fil key}
-});
-console.log(data)
+for (var i = 0; i < 36; i++) {
+	var country = (data[i].country);
+	var indicator = (data[i].indicator);
+	//console.log(country);
+	match (country);
+}
 
-
-
-
+function match (country) {
+	for (var j = 0; j < 249; j++) {
+		if (country == country_codes[j][2]) {
+			var code = country_codes[j][1]
+			//console.log(code);
+			//format(code, indicator);
+			var series = [code, indicator]
+			console.log(series);
+		}
+	}
+}
 // formateer naar het juiste datamap format
 // var dataset = {};
-// function format (code, GDP) {
-// 	//console.log(code, GDP);
-// 	for (var k = 0; k < 186; k++){
+// function format (code, indicator) {
+// 	console.log(code, indicator);
+// 	for (var k = 0; k < 37; k++){
 // 		var gok = 1
 // 	}	
 // }
 
-});
+ });

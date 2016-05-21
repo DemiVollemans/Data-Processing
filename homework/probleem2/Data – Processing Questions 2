@@ -1,0 +1,32 @@
+Data – Processing Questions 2
+1.  How can D3 access and change the DOM? What do select and selectAll do?
+You can do this using D3's data matching. The idea is to have the data "identify" the correct element for you. .select just selects the first element that meets the criteria. .selectAll selects all the elements the meet the criteria. The criteria is specified between the brackets.
+
+2. What are the d and i in function(d){} and function(d, i){}?
+The d represents the data associated with a given selection.  both d and i, then i will correspond to an index. The first value will have an index of zero. 
+
+3. Write sample lines of JavaScript to add a div element with class “barChart1” and to add an svg element with class “barChart2” with square dimensions.
+Var bar1  = document.createElement(“barChart1”);
+Bar1.innerHTML = “content”;
+Document.body.appendChild(bar1);
+-------
+<svg class = “BarChart2”>
+<rect width = “150” heigth = “150” />
+ </svg>
+------
+
+4. Describe append, update, enter, and exit at a high level. What does “selectAll + data + enter + append” refer to?
+Append = to add stuff you need append, which takes as an argument the type of element that needs to be created, while the html method at the end allow us to specify a text.
+Update = update the excisting elements
+.Data = tie the dataset to the selection you want to modify, so a variable. 
+Enter = prepares one new element for every unmatched data item. So when you have zero elements yet and 5 data items, the enter selection will prepare 5 new elements.
+Exit = the opposite of enter, you have to re-specify the data with select all. 
+SelectAll + data + enter + append refers to, selecting all elements who meet the criticism, data ties the dataset to the selection, enter prepares new elements for the mismatched data items, append makes sure what kind of stuff you want to append for the items.
+
+5. What are the main differences between drawing a bar chart with HTML and SVG?
+Unlike HTML, SVG elements must be positioned relative to the top-left corner of the container; SVG does not support flow layout or even text wrapping.
+
+6. In drawing the simple bar chart with D3 and SVG, what elements were appended, and what parts of the graph did these elements correspond to?
+The element rect, is appended. Where the shape of the rectangle is dependent on the data, x and bar-height.
+Also the element text is appended. SVG requires text to be placed explicitly in text elements.  The text position must be offset by three pixels from the end  of the bar. So the attributes are set depending on the data. 
+
